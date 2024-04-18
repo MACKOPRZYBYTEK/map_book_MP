@@ -1,4 +1,4 @@
-from utiles.crud import read, create_user, search
+from utiles.crud import read, create_user, search, remove
 from models.data import users
 
 if __name__ == '__main__':
@@ -10,6 +10,7 @@ if __name__ == '__main__':
         print("1.Pokaż co u znajomych: ")
         print("2.Dodaj znajomego: ")
         print("3. Wyszukaj znajomego: ")
+        print("4. Usuń znajomego: ")
         menu_option: str = input("Wybierz dostępną funkcję z menu: ")
         if menu_option == "0":
             break
@@ -19,6 +20,8 @@ if __name__ == '__main__':
             create_user(users)
         if menu_option == "3":
             search(users)
+        if menu_option == "4":
+            remove(users)
 
 
 
